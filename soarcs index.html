@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <br />
+    <title>SoarCS Homepage</title>
+    <style>
+      /* this is the header*/
+      body {
+        margin: 0;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+      }
+      
+      .header-container {
+        display: flex;
+        flex-direction: row;
+        color: #3500d3;
+        font-weight: bold;
+        justify-content: space-between;
+        margin: 0 50px;
+        height: 4.25rem;
+      }
+
+      .header-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: flex-end;
+      }
+
+      .header {
+        padding: 0px;
+        margin-top: 0px;
+        list-style-type: none;
+      }
+
+      /* 3 buttons on the header*/
+      .header-button {
+        font-size: 20px;
+        margin: 1rem 2rem;
+        text-decoration: none;
+      }
+
+      .header-button:visited {
+        color: #3500d3;
+      }
+
+      .header-button:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      
+      .shareout {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("https://assets.entrepreneur.com/content/3x2/2000/1649279368-Ent-2022Python.jpeg?crop=4:3"); 
+        height: 450px;
+        width: 100%;
+      }
+      .shareout-title{
+        text-align: center;
+        padding: 100px 0px 20px;
+        margin: 0px;
+        font-size: 35px;
+        color: rgba(246, 242, 254, 0.945);
+        text-align: center;
+        font-weight: bold;
+      }
+      .recording:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .system {
+        color: rgba(246, 242, 254, 0.945);
+        font-size: 28px;
+        margin: 2px 0px 10px;
+        text-align: center;
+      }
+      .recording {
+        display: block;
+        list-style-type: none;
+        text-align: center;
+        padding: 0px 0px 50px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .link {
+        color: rgba(246, 242, 254, 0.945);
+        text-decoration: none;
+      }
+      .shareout-button {
+        display: block;
+        list-style-type: none;
+        text-align: center;
+        padding: 0px 0px 20px;
+        font-size: 20px;
+        text-align: center;
+      }
+       .shareout-button-click {
+        margin: 30px auto 30px auto;
+        text-decoration: none;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+        color: rgba(246, 242, 254, 0.945);
+        padding: 20px 40px;
+        background-color: #3500d3; 
+        border: 1px solid #3500d3;
+        border-radius: 50px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      .shareout-button-click:hover {
+        background: rgba(246, 242, 254, 0.945);
+        color: #3500d3;
+        cursor: pointer;
+      }
+    
+       /* this is the poll section*/
+      
+      .pollinfo {
+        color: #1e1d20;
+        font-size: 35px;
+        text-align: center;
+        margin: 100px 0px 50px;
+      }
+      .poll-button {
+        display: block;
+        list-style-type: none;
+        text-align: center;
+        padding: 0px 0px 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+      .poll-button-click {
+        margin: 30px auto 30px auto;
+        text-decoration: none;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+        color: #3500d3;
+        padding: 20px 40px;
+        background-color: rgba(246, 242, 254, 0.945); 
+        border: 1px solid #3500d3;
+        border-radius: 50px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      .poll-button-click:hover {
+        background: #3500d3;
+        color: rgba(246, 242, 254, 0.945);
+        cursor: pointer;
+      } 
+      /* this is the past winner's section*/
+
+      .past-winner {
+        margin: 100px 0px 200px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://pbs.twimg.com/media/FUGG4FvXsAIszWo?format=jpg&name=4096x4096"); 
+        height: 450px;
+        width: 100%;
+        background-position: center -980px;
+      }
+      .student-name {
+        color: rgba(246, 242, 254, 0.945);
+        font-size: 28px;
+        margin: 5px 0px 50px;
+        text-align: center;
+      }
+      .project {
+        display: block;
+        list-style-type: none;
+        text-align: center;
+        padding: 0px 0px 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+      .past-winner-text {
+        text-align: center;
+        padding: 100px 0px 30px;
+        margin: 0px;
+        font-size: 35px;
+        color: rgba(246, 242, 254, 0.945);
+        text-align: center;
+        font-weight: bold;
+      }
+    .view-project-button {
+        margin: 60px auto 30px auto;
+        font-size: 28px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+        color: rgba(246, 242, 254, 0.945);
+        padding: 20px 40px;
+        background-color: #3500d3; 
+        border: 1px solid #3500d3;
+        border-radius: 50px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      .view-project-button:hover {
+        background: rgba(246, 242, 254, 0.945);
+        color: #3500d3;
+        cursor: pointer;
+      }
+      /* this is the footer*/
+
+      footer {
+        padding: 3px 0px 15px;
+        margin: 200px 0px 0px;
+        font-size: 11px;
+        background-color: #3500d3;
+        background-size: 100%;
+      }
+      .footer-rows {
+        display: grid;
+        grid-template-columns: 0.7fr 0.8fr 0.6fr 0.6fr 0.3fr;
+        grid-gap: 10px;
+      }
+      .column-one {
+        font-weight: normal;
+        font-size: 20px;
+        color: rgba(246, 242, 254, 0.945);
+        padding: 30px 0px 10px 50px;
+        text-align: left;
+        margin: 0;
+      }
+      .program-name {
+        font-size: 30px; 
+        margin: 5px 0px 10px;
+      }
+      .prg-descr {
+        font-size: 20px;
+        line-height: 22px;
+        margin: 5px 0px 30px;
+      }
+      h8 {
+        padding: 20px 0px 5px;
+        font-size: 28px;
+        font-weight: bolder;
+      }
+      .students {
+        margin: 5px 0px;
+        font-size: 20px;
+        line-height: 22px;
+      }
+      .year {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .column-two {
+        padding: 20px 20px 20px 200px;
+        font-size: 20px;
+        text-align: left;
+        color: rgba(246, 242, 254, 0.945);
+      }
+      li {
+        list-style: none;
+        line-height: 40px;
+      }
+      .trigger {
+        list-style: none;
+        font-weight: lighter;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background: none;
+        font-size: 20px;
+        color: rgba(246, 242, 254, 0.945);
+        border: none;
+        text-align: left;
+        padding: 0;
+      }
+      .trigger:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+      }
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 1rem 1.5rem;
+        width: 70rem;
+        border-radius: 0.5rem;
+        color: rgb(22, 21, 21);
+    }
+
+    .close-button {
+        float: right;
+        width: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        background-color: lightgray;
+    }
+
+    .close-button:hover {
+        background-color: darkgray;
+    }
+
+    .show-modal {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1.0);
+        transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+    .organizer-photos {
+      border-radius: 6px;
+      padding: 5px;
+    }
+    .program-info-link {
+      color:rgba(246, 242, 254, 0.945);
+      font-weight: lighter;
+      text-decoration: none;
+    }
+    .program-info-link:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+      .uml-link {
+        color: rgba(246, 242, 254, 0.945);
+        text-decoration: none;
+      }
+      .uml-link:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .column-three {
+        padding: 20px;
+        font-size: 20px;
+        text-align: left;
+        font-weight: lighter;
+        color: rgba(246, 242, 254, 0.945);
+      }
+      .column-four {
+        padding: 20px;
+        font-size: 20px;
+        text-align: left;
+        font-weight: lighter;
+        color: rgba(246, 242, 254, 0.945);
+      }
+    </style>
+  </head>
+  <body>
+
+    <!--this is the header-->
+
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="header">SoarCS</h1>
+      </div>
+      <!-- this is the right buttons section-->
+      <div class="header-buttons">
+        <a href="https://google.com" class="projectgallery header-button">Project Gallery</a>
+        <a href="https://google.com" class="recordings header-button">Recordings</a>
+        <a href="https://www.uml.edu/sciences/soarcs.aspx" class="abouttop header-button">About</a>
+      </div>
+    </div>
+    
+    
+    
+
+    <!--this is the shareout section-->
+
+     <div class="shareout">
+      <h3 class="shareout-title">This week's project:</h3>
+      <p class="system">Python</p>
+      <div class="recording">
+        <a
+          href="https://uml.zoom.us/rec/share/T9WDQyg64R2L3kkVjaEiCFB13PuRnxlnC-iTLelpOoctqE3ey8uJT_3-o5WGwVOY.n75L8ijyRzdthK9r?startTime=1658759540000"
+          target="_blank"
+          class="link">
+          link to recording
+        </a>
+      </div>
+      <div class="shareout-button">
+        <a target="_blank" class="shareout-button-click" href="https://docs.google.com/forms/d/e/1FAIpQLSf7WwYOqrXpFI5e0Vy9y-cqS0UwqzkyWrWhDNFG4i9WzmjJfg/viewform">Submit here</a>
+      </div>
+    </div>
+    
+       <!-- poll section -->
+    
+    <div class="poll">
+      <p class="pollinfo">Click below to vote on your favorite project and view the poll</p>
+      <div class="poll-button">
+      <a target="_blank" class="poll-button-click" href="https://docs.google.com/forms/d/e/1FAIpQLScXBHISdWDijcKbhWMXsA2zQ1S6Co2exNKpodInxBgvW-6cOw/viewform">Vote here</a> 
+      </div>
+    </div>
+
+    <!--this is the past winner's section-->
+
+    <div class="past-winner">
+      <h3 class="past-winner-text">Last week's winner:</h3>
+      <p class="student-name">Meriem Elkoudi</p>
+      <div class="project">
+        <a target="_blank" class="view-project-button" href="https://colab.research.google.com/drive/1SXlVLY2h_R-HwuG-6seCg829kWpsPees?usp=sharing">View project</a>
+     </div>
+    </div>
+
+    <!--this is the footer-->
+
+    <footer>
+      <div class="footer-rows">
+        <div class="column-one">
+          <h3 class="program-name">SoarCS</h3>
+          <p class="prg-descr">
+            A hybrid program for aspiring Computer Science students that runs yearly
+            during the summer.
+          </p>
+          <h8>Coded by</h8>
+          <br />
+          <p class="students">
+            Meriem Elkoudi, Shreya Mishra, and Wendy Carvalho
+          </p>
+          <br />
+          <p class="year">SoarCS 2022</p>
+        </div>
+
+        <div class="column-two">
+          <h3>About</h3>
+          <li>
+
+      <!--this is the modal section-->
+
+          <button class="trigger">Organizers and Peer Leaders</button>
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Organizers</h2>
+                    <p>SoarCS 2022 was made possible by Foozieh Mir (Coordinator of Undergraduate Programs), Fred Martin, Ph.D. (Associate Dean for Teaching, Learning and Undergraduate Studies),
+                      and Tom Wilkes, Ph.D. (Associate Teaching Professor).</p>
+                    <img class="organizer-photos"
+                        src="https://www.uml.edu/Images/Mir-Foozieh-800_tcm18-319136.jpg?w=x"
+                        alt="Foozieh Mir"
+                        width="200" />
+                    <img class="organizer-photos"
+                        src="https://www.uml.edu/Images/martin-fred-1400-opt_tcm18-254019.jpg?w=x"
+                        alt="Foozieh Mir"
+                        width="200" 
+                        height="200" />
+                    <img class="organizer-photos"
+                        src="https://www.uml.edu/Images/Tom%20Wilkes_Charles_tcm18-292873.jpg?w=x"
+                        alt="Foozieh Mir"
+                        width="200" />
+                    <h2>Peer Leaders</h2>
+                    <p>This summer's dedicated Peer Leaders were Ariana (sophomore), Vennela (senior), Vladimir (junior), and Zach (senior).</p>
+                  </div>
+            </div>
+          </li>
+          <li>
+          <div class="program-info">
+            <a class="program-info-link" href="https://www.uml.edu/sciences/soarcs.aspx">Program</a>
+            </div>
+          </li>
+        </div>
+
+
+  			<div class="column-three">
+          <h3>UML</h3>
+          <p>Apply for SoarCS with the UMass Lowell Kennedy College of Sciences 
+          <a target="_blank" class="uml-link" href="https://www.uml.edu/sciences/soarcs.aspx">here.
+          </a></p>
+        </div>
+        <div class="column-four">
+          <h3>Sponsored by</h3>
+          <p>
+            <strong>Red Hat, Inc.,</strong> the world's leading provider of open source
+            software products to enterprises.
+          </p>
+          <p><strong>Teradyne, Inc.,</strong> an American manufacturer of automatic test equipment across various industries.</p>
+        </div>
+        <div class="column-five">
+      </div>
+    </footer>
+    <script>
+
+      const modal = document.querySelector(".modal");
+      const trigger = document.querySelector(".trigger");
+      const closeButton = document.querySelector(".close-button");
+
+      function toggleModal() {
+          modal.classList.toggle("show-modal");
+      }
+
+      function windowOnClick(event) {
+          if (event.target === modal) {
+              toggleModal();
+          }
+      }
+
+      trigger.addEventListener("click", toggleModal);
+      closeButton.addEventListener("click", toggleModal);
+      window.addEventListener("click", windowOnClick);
+
+    </script>
+  </body>
+</html>
